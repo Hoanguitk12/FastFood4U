@@ -1,0 +1,87 @@
+create database fastfood
+go
+use fastfood
+go
+create table TableStaff
+(
+	idstaff		int identity primary key,
+	namestaff	nvarchar(100) not null,
+	birthday	datetime not null,
+	workday		datetime not null,
+	sex			nvarchar(100) not null,
+	address		nvarchar(100) not null,
+	phonenumber	int not null
+)
+go
+
+create table TableAccount
+(
+	idaccount	int identity primary key,
+	nameaccount	nvarchar(100) not null default 'Admin',
+	password	nvarchar(100) not null default '1234',
+	status		nvarchar(100) not null default 'admin',
+	idstaff		int not null,
+
+	foreign key(idstaff) references dbo.TableStaff(idstaff)
+)
+go
+
+
+create table TableImport
+(
+	idimport	int identity primary key,
+	dayimport	datetime not null,
+	supplier	nvarchar(100) not null,
+	nameimport	nvarchar(100) not null,
+	numbers		int not null,
+	unitprice	money not null,
+	idaccount	int not null,
+
+	foreign key(idaccount) references dbo.TableAccount(idaccount)
+
+)
+go
+
+create table TableFood
+(
+	idfood		int identity primary key,
+	namefood	nvarchar(100) not null,
+	cost		money not null,
+	numbers		int not null,
+)
+go
+
+create table TableDrink
+(
+	iddrink		int identity primary key,
+	namedrink	nvarchar(100) not null,
+	cost		money not null,
+	numbers		int not null,
+)
+go
+
+create table TableBill
+(
+	idbill		int identity primary key,
+	datecheck	datetime not null,
+	idfood		int not null,
+	iddrink		int not null,
+	totalbill	money not null,
+	total		money not null,
+	exchange	money not null,
+	idaccount	int not null,
+
+	foreign key(idfood) references dbo.TableFood(idfood),
+	foreign key(iddrink) references dbo.TableDrink(iddrink),
+	foreign key(idaccount) references dbo.TableAccount(idaccount),
+)
+go
+
+create table TableRevenue
+(
+	idrevenue	int identity primary key,
+	datecheck	datetime not null,
+	total		money not null,
+)
+go
+
