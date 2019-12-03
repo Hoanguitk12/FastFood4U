@@ -1,0 +1,16 @@
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.Properties.Resources.resources
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\WindowsFormsApp7\bin\Debug\WindowsFormsApp7.exe.config
+C:\Users\Admin\source\repos\WindowsFormsApp7\bin\Debug\WindowsFormsApp7.exe
+C:\Users\Admin\source\repos\WindowsFormsApp7\bin\Debug\WindowsFormsApp7.pdb
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.exe
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.pdb
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.frmLogin.resources
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.frmMain.resources
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.GUIFastFood.frmThongTin.resources
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.GUIFastFood.frmAccount.resources
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.GUIFastFood.frmCreatBill.resources
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.GUIFastFood.frmImport.resources
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.GUIFastFood.frmRevenue.resources
+C:\Users\Admin\source\repos\WindowsFormsApp7\obj\Debug\WindowsFormsApp7.GUIFastFood.frmStaff.resources
