@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp7.DTOFastFood;
 
 namespace WindowsFormsApp7.DALFastFood
 {
@@ -44,6 +45,62 @@ namespace WindowsFormsApp7.DALFastFood
                 }
             }
             return id;
+        }
+     public List<DTOAccount> GetListAccount()
+        {
+            List<DTOAccount> list = new List<DTOAccount>();
+            string query = string.Format("SELECT * FROM TableAccount ");
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in dt.Rows)
+            {
+                DTOAccount account = new DTOAccount(item);
+                list.Add(account);
+            }
+            return list;
+        }
+
+        public DataTable GetAccount()
+        {
+            string query = "SELECT * FROM TableAccount ORDER BY nameaccount";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
+
+        public DataTable GetAccount(string query)
+        {
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
+        public DTOAccount GetAccountById(int idaccount)
+        {
+            string query = string.Format("SELECT idaccount,nameaccount,password,status,idstaff FROM TableAccount WHERE idaccount={0}", idaccount);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            DTOAccount gv = new DTOAccount(dt.Rows[0]);
+            return gv;
+        }
+        public bool AddAccount(string nameaccount,string password,string status,int idstaff)
+        {
+            int kq = 0;
+
+            string query = string.Format("INSERT INTO TableAccount(nameaccount,password,status,idstaff) VALUES (N'{0}',N'{1}','{2}',N'{3}')", nameaccount, password,status,idstaff);
+            kq = DataProvider.Instance.ExecuteNonQuery(query);
+            return kq > 0;
+        }
+
+        public bool EditAccount(int idaccount, string nameaccount, string password, string status, int idstaff)
+        {
+            int kq = 0;
+            string query = string.Format("UPDATE TableAccount SET nameaccount = N'{0}', password = N'{1}', status= '{2}', idstaff = N'{3}' WHERE idaccount= {4}",nameaccount,password,status,idstaff,idaccount );
+            kq = DataProvider.Instance.ExecuteNonQuery(query);
+            return kq > 0;
+        }
+
+        public bool DeleteAccount(int idaccount)
+        {
+            int kq = 0;
+            string query = string.Format("DELETE FROM TableAccount WHERE idaccount={0}", idaccount);
+            kq = DataProvider.Instance.ExecuteNonQuery(query);
+            return kq > 0;
         }
     }
     

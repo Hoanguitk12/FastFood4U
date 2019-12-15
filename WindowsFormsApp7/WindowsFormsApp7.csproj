@@ -47,9 +47,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUSFastFood\BUSAccount.cs" />
+    <Compile Include="BUSFastFood\BUSBill.cs" />
+    <Compile Include="BUSFastFood\BUSImport.cs" />
+    <Compile Include="BUSFastFood\BUSItemOdered.cs" />
+    <Compile Include="BUSFastFood\BUSStaff.cs" />
     <Compile Include="DALFastFood\DALAccount.cs" />
+    <Compile Include="DALFastFood\DALBill.cs" />
+    <Compile Include="DALFastFood\DALImport.cs" />
+    <Compile Include="DALFastFood\DALItemOdered.cs" />
+    <Compile Include="DALFastFood\DALStaff.cs" />
     <Compile Include="DALFastFood\DataProvider.cs" />
     <Compile Include="DTOFastFood\DTOAccount.cs" />
+    <Compile Include="DTOFastFood\DTOBill.cs" />
+    <Compile Include="DTOFastFood\DTOImport.cs" />
+    <Compile Include="DTOFastFood\DTOItemOdered.cs" />
+    <Compile Include="DTOFastFood\DTOStaff.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,18 +138,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>

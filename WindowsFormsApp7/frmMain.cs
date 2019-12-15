@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp7.DALFastFood;
+using WindowsFormsApp7.DTOFastFood;
 using WindowsFormsApp7.GUIFastFood;
 
 namespace WindowsFormsApp7
@@ -17,6 +19,7 @@ namespace WindowsFormsApp7
         {
             InitializeComponent();
         }
+       
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -31,14 +34,19 @@ namespace WindowsFormsApp7
 
         private void btnCreatBill_Click(object sender, EventArgs e)
         {
-            pnZone.Controls.Clear();
-            frmCreatBill frmCreatBill = new frmCreatBill();
-            frmCreatBill.TopLevel = false;
-            pnZone.Controls.Add(frmCreatBill);
-            frmCreatBill.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            frmCreatBill.AutoScroll = true;
-            frmCreatBill.Dock = DockStyle.Fill;
-            frmCreatBill.Show();
+
+          // int idaccount = int.Parse(frmLogin.ID_USER); 
+          //  string daycheck = DateTime.Now.ToString("MM/dd/yyyy");
+          //  int totalbill = 0;
+           // int total = 0;
+           // int exchange = 0;
+           // DALBill.Instance.AddBill(daycheck, totalbill, total, exchange, idaccount);
+           //id bill la id lon nhat
+
+            frmCreatBill fm = new frmCreatBill();
+            this.Hide();
+            fm.ShowDialog();
+            this.Show();
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
@@ -88,5 +96,7 @@ namespace WindowsFormsApp7
             frmImport.Dock = DockStyle.Fill;
             frmImport.Show();
         }
+       
+
     }
 }

@@ -28,181 +28,619 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTotalBill = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.cbDrink = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.GridItem = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGaCay = new System.Windows.Forms.Button();
+            this.btnGaTruyenThong = new System.Windows.Forms.Button();
+            this.btnCanhGaCay = new System.Windows.Forms.Button();
+            this.btnCanhTruyenThong = new System.Windows.Forms.Button();
+            this.btnUcGaCay = new System.Windows.Forms.Button();
+            this.btnUcTruyenThong = new System.Windows.Forms.Button();
+            this.btn34Cay = new System.Windows.Forms.Button();
+            this.btn34tt = new System.Windows.Forms.Button();
+            this.btnBo = new System.Windows.Forms.Button();
+            this.btnSpa = new System.Windows.Forms.Button();
+            this.btnKhoaiLon = new System.Windows.Forms.Button();
+            this.btnCom = new System.Windows.Forms.Button();
+            this.btnSpecial = new System.Windows.Forms.Button();
+            this.btnKemCay = new System.Windows.Forms.Button();
+            this.btnGa = new System.Windows.Forms.Button();
+            this.btnKhoaiNho = new System.Windows.Forms.Button();
+            this.btnPizza = new System.Windows.Forms.Button();
+            this.btnSalad = new System.Windows.Forms.Button();
+            this.btnBanhCuon = new System.Windows.Forms.Button();
+            this.btnPepsiLon = new System.Windows.Forms.Button();
+            this.btnPepSiNho = new System.Windows.Forms.Button();
+            this.btnSpriteLon = new System.Windows.Forms.Button();
+            this.btnSpriteNho = new System.Windows.Forms.Button();
+            this.btnCocaLon = new System.Windows.Forms.Button();
+            this.btnCocaNho = new System.Windows.Forms.Button();
+            this.btncb6 = new System.Windows.Forms.Button();
+            this.btncb3 = new System.Windows.Forms.Button();
+            this.btncbS = new System.Windows.Forms.Button();
+            this.btncbL = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button33 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtDateCheck = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbFood = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.cbNumber = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cbCashier = new System.Windows.Forms.ComboBox();
-            this.txtCash = new System.Windows.Forms.TextBox();
-            this.txtExchange = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
+            this.txtNote = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.GridItem)).BeginInit();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(-7, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 354);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Đồ ăn";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(-7, 352);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 158);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Đồ Uống";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(-7, 506);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(115, 116);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Combo";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // GridItem
+            // 
+            this.GridItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            this.GridItem.Location = new System.Drawing.Point(642, 37);
+            this.GridItem.Name = "GridItem";
+            this.GridItem.ReadOnly = true;
+            this.GridItem.RowHeadersWidth = 51;
+            this.GridItem.RowTemplate.Height = 24;
+            this.GridItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridItem.Size = new System.Drawing.Size(908, 358);
+            this.GridItem.TabIndex = 3;
+            this.GridItem.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.GridItem_RowPostPaint);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // btnGaCay
+            // 
+            this.btnGaCay.Location = new System.Drawing.Point(105, 2);
+            this.btnGaCay.Name = "btnGaCay";
+            this.btnGaCay.Size = new System.Drawing.Size(156, 40);
+            this.btnGaCay.TabIndex = 4;
+            this.btnGaCay.Tag = "36000";
+            this.btnGaCay.Text = "Gà cay";
+            this.btnGaCay.UseVisualStyleBackColor = true;
+            this.btnGaCay.Click += new System.EventHandler(this.btnGaCay_Click);
+            // 
+            // btnGaTruyenThong
+            // 
+            this.btnGaTruyenThong.Location = new System.Drawing.Point(105, 37);
+            this.btnGaTruyenThong.Name = "btnGaTruyenThong";
+            this.btnGaTruyenThong.Size = new System.Drawing.Size(156, 40);
+            this.btnGaTruyenThong.TabIndex = 5;
+            this.btnGaTruyenThong.Tag = "36000";
+            this.btnGaTruyenThong.Text = "Gà truyền thống";
+            this.btnGaTruyenThong.UseVisualStyleBackColor = true;
+            // 
+            // btnCanhGaCay
+            // 
+            this.btnCanhGaCay.Location = new System.Drawing.Point(105, 74);
+            this.btnCanhGaCay.Name = "btnCanhGaCay";
+            this.btnCanhGaCay.Size = new System.Drawing.Size(156, 40);
+            this.btnCanhGaCay.TabIndex = 6;
+            this.btnCanhGaCay.Tag = "25000";
+            this.btnCanhGaCay.Text = "Cánh gà cay";
+            this.btnCanhGaCay.UseVisualStyleBackColor = true;
+            // 
+            // btnCanhTruyenThong
+            // 
+            this.btnCanhTruyenThong.Location = new System.Drawing.Point(105, 110);
+            this.btnCanhTruyenThong.Name = "btnCanhTruyenThong";
+            this.btnCanhTruyenThong.Size = new System.Drawing.Size(156, 40);
+            this.btnCanhTruyenThong.TabIndex = 7;
+            this.btnCanhTruyenThong.Tag = "25000";
+            this.btnCanhTruyenThong.Text = "Cánh truyền thống";
+            this.btnCanhTruyenThong.UseVisualStyleBackColor = true;
+            // 
+            // btnUcGaCay
+            // 
+            this.btnUcGaCay.Location = new System.Drawing.Point(105, 146);
+            this.btnUcGaCay.Name = "btnUcGaCay";
+            this.btnUcGaCay.Size = new System.Drawing.Size(156, 40);
+            this.btnUcGaCay.TabIndex = 8;
+            this.btnUcGaCay.Tag = "30000";
+            this.btnUcGaCay.Text = "Ức gà cay";
+            this.btnUcGaCay.UseVisualStyleBackColor = true;
+            // 
+            // btnUcTruyenThong
+            // 
+            this.btnUcTruyenThong.Location = new System.Drawing.Point(105, 183);
+            this.btnUcTruyenThong.Name = "btnUcTruyenThong";
+            this.btnUcTruyenThong.Size = new System.Drawing.Size(156, 40);
+            this.btnUcTruyenThong.TabIndex = 9;
+            this.btnUcTruyenThong.Tag = "30000";
+            this.btnUcTruyenThong.Text = "Ức truyền thống";
+            this.btnUcTruyenThong.UseVisualStyleBackColor = true;
+            // 
+            // btn34Cay
+            // 
+            this.btn34Cay.Location = new System.Drawing.Point(105, 218);
+            this.btn34Cay.Name = "btn34Cay";
+            this.btn34Cay.Size = new System.Drawing.Size(156, 40);
+            this.btn34Cay.TabIndex = 10;
+            this.btn34Cay.Tag = "75000";
+            this.btn34Cay.Text = "Ba phần tư cay";
+            this.btn34Cay.UseVisualStyleBackColor = true;
+            // 
+            // btn34tt
+            // 
+            this.btn34tt.Location = new System.Drawing.Point(105, 254);
+            this.btn34tt.Name = "btn34tt";
+            this.btn34tt.Size = new System.Drawing.Size(156, 47);
+            this.btn34tt.TabIndex = 11;
+            this.btn34tt.Tag = "75000";
+            this.btn34tt.Text = "Ba phần tư truyền thống";
+            this.btn34tt.UseVisualStyleBackColor = true;
+            // 
+            // btnBo
+            // 
+            this.btnBo.Location = new System.Drawing.Point(105, 299);
+            this.btnBo.Name = "btnBo";
+            this.btnBo.Size = new System.Drawing.Size(156, 47);
+            this.btnBo.TabIndex = 12;
+            this.btnBo.Tag = "50000";
+            this.btnBo.Text = "Hamburger bò";
+            this.btnBo.UseVisualStyleBackColor = true;
+            // 
+            // btnSpa
+            // 
+            this.btnSpa.Location = new System.Drawing.Point(410, 74);
+            this.btnSpa.Name = "btnSpa";
+            this.btnSpa.Size = new System.Drawing.Size(156, 40);
+            this.btnSpa.TabIndex = 13;
+            this.btnSpa.Tag = "65000";
+            this.btnSpa.Text = "Spagheti";
+            this.btnSpa.UseVisualStyleBackColor = true;
+            // 
+            // btnKhoaiLon
+            // 
+            this.btnKhoaiLon.Location = new System.Drawing.Point(258, 74);
+            this.btnKhoaiLon.Name = "btnKhoaiLon";
+            this.btnKhoaiLon.Size = new System.Drawing.Size(156, 40);
+            this.btnKhoaiLon.TabIndex = 14;
+            this.btnKhoaiLon.Tag = "25000";
+            this.btnKhoaiLon.Text = "Khoai tây lớn";
+            this.btnKhoaiLon.UseVisualStyleBackColor = true;
+            // 
+            // btnCom
+            // 
+            this.btnCom.Location = new System.Drawing.Point(410, 37);
+            this.btnCom.Name = "btnCom";
+            this.btnCom.Size = new System.Drawing.Size(156, 40);
+            this.btnCom.TabIndex = 15;
+            this.btnCom.Tag = "10000";
+            this.btnCom.Text = "Cơm Thêm";
+            this.btnCom.UseVisualStyleBackColor = true;
+            // 
+            // btnSpecial
+            // 
+            this.btnSpecial.Location = new System.Drawing.Point(258, 37);
+            this.btnSpecial.Name = "btnSpecial";
+            this.btnSpecial.Size = new System.Drawing.Size(156, 40);
+            this.btnSpecial.TabIndex = 16;
+            this.btnSpecial.Tag = "80000";
+            this.btnSpecial.Text = "Hamburger Special";
+            this.btnSpecial.UseVisualStyleBackColor = true;
+            // 
+            // btnKemCay
+            // 
+            this.btnKemCay.Location = new System.Drawing.Point(410, 2);
+            this.btnKemCay.Name = "btnKemCay";
+            this.btnKemCay.Size = new System.Drawing.Size(156, 40);
+            this.btnKemCay.TabIndex = 17;
+            this.btnKemCay.Tag = "10000";
+            this.btnKemCay.Text = "Kem Cây";
+            this.btnKemCay.UseVisualStyleBackColor = true;
+            // 
+            // btnGa
+            // 
+            this.btnGa.Location = new System.Drawing.Point(258, 2);
+            this.btnGa.Name = "btnGa";
+            this.btnGa.Size = new System.Drawing.Size(156, 40);
+            this.btnGa.TabIndex = 18;
+            this.btnGa.Tag = "65000";
+            this.btnGa.Text = "Hamburger gà";
+            this.btnGa.UseVisualStyleBackColor = true;
+            // 
+            // btnKhoaiNho
+            // 
+            this.btnKhoaiNho.Location = new System.Drawing.Point(258, 110);
+            this.btnKhoaiNho.Name = "btnKhoaiNho";
+            this.btnKhoaiNho.Size = new System.Drawing.Size(156, 40);
+            this.btnKhoaiNho.TabIndex = 19;
+            this.btnKhoaiNho.Tag = "35000";
+            this.btnKhoaiNho.Text = "Khoai tây nhỏ";
+            this.btnKhoaiNho.UseVisualStyleBackColor = true;
+            // 
+            // btnPizza
+            // 
+            this.btnPizza.Location = new System.Drawing.Point(410, 110);
+            this.btnPizza.Name = "btnPizza";
+            this.btnPizza.Size = new System.Drawing.Size(156, 40);
+            this.btnPizza.TabIndex = 20;
+            this.btnPizza.Tag = "100000";
+            this.btnPizza.Text = "Pizza Special";
+            this.btnPizza.UseVisualStyleBackColor = true;
+            // 
+            // btnSalad
+            // 
+            this.btnSalad.Location = new System.Drawing.Point(258, 146);
+            this.btnSalad.Name = "btnSalad";
+            this.btnSalad.Size = new System.Drawing.Size(156, 40);
+            this.btnSalad.TabIndex = 21;
+            this.btnSalad.Tag = "20000";
+            this.btnSalad.Text = "Salad";
+            this.btnSalad.UseVisualStyleBackColor = true;
+            // 
+            // btnBanhCuon
+            // 
+            this.btnBanhCuon.Location = new System.Drawing.Point(258, 183);
+            this.btnBanhCuon.Name = "btnBanhCuon";
+            this.btnBanhCuon.Size = new System.Drawing.Size(156, 40);
+            this.btnBanhCuon.TabIndex = 22;
+            this.btnBanhCuon.Tag = "20000";
+            this.btnBanhCuon.Text = "Bánh cuộn";
+            this.btnBanhCuon.UseVisualStyleBackColor = true;
+            // 
+            // btnPepsiLon
+            // 
+            this.btnPepsiLon.Location = new System.Drawing.Point(105, 352);
+            this.btnPepsiLon.Name = "btnPepsiLon";
+            this.btnPepsiLon.Size = new System.Drawing.Size(156, 40);
+            this.btnPepsiLon.TabIndex = 23;
+            this.btnPepsiLon.Tag = "20000";
+            this.btnPepsiLon.Text = "Pepsi Lớn";
+            this.btnPepsiLon.UseVisualStyleBackColor = true;
+            // 
+            // btnPepSiNho
+            // 
+            this.btnPepSiNho.Location = new System.Drawing.Point(105, 388);
+            this.btnPepSiNho.Name = "btnPepSiNho";
+            this.btnPepSiNho.Size = new System.Drawing.Size(156, 40);
+            this.btnPepSiNho.TabIndex = 24;
+            this.btnPepSiNho.Tag = "30000";
+            this.btnPepSiNho.Text = "PepSi Nhỏ";
+            this.btnPepSiNho.UseVisualStyleBackColor = true;
+            // 
+            // btnSpriteLon
+            // 
+            this.btnSpriteLon.Location = new System.Drawing.Point(258, 352);
+            this.btnSpriteLon.Name = "btnSpriteLon";
+            this.btnSpriteLon.Size = new System.Drawing.Size(156, 40);
+            this.btnSpriteLon.TabIndex = 25;
+            this.btnSpriteLon.Tag = "20000";
+            this.btnSpriteLon.Text = "Sprite Lớn";
+            this.btnSpriteLon.UseVisualStyleBackColor = true;
+            // 
+            // btnSpriteNho
+            // 
+            this.btnSpriteNho.Location = new System.Drawing.Point(258, 388);
+            this.btnSpriteNho.Name = "btnSpriteNho";
+            this.btnSpriteNho.Size = new System.Drawing.Size(156, 40);
+            this.btnSpriteNho.TabIndex = 26;
+            this.btnSpriteNho.Tag = "30000";
+            this.btnSpriteNho.Text = "Sprite Nhỏ";
+            this.btnSpriteNho.UseVisualStyleBackColor = true;
+            // 
+            // btnCocaLon
+            // 
+            this.btnCocaLon.Location = new System.Drawing.Point(105, 423);
+            this.btnCocaLon.Name = "btnCocaLon";
+            this.btnCocaLon.Size = new System.Drawing.Size(156, 40);
+            this.btnCocaLon.TabIndex = 27;
+            this.btnCocaLon.Tag = "20000";
+            this.btnCocaLon.Text = "Coca Lớn";
+            this.btnCocaLon.UseVisualStyleBackColor = true;
+            // 
+            // btnCocaNho
+            // 
+            this.btnCocaNho.Location = new System.Drawing.Point(258, 423);
+            this.btnCocaNho.Name = "btnCocaNho";
+            this.btnCocaNho.Size = new System.Drawing.Size(156, 40);
+            this.btnCocaNho.TabIndex = 28;
+            this.btnCocaNho.Tag = "30000";
+            this.btnCocaNho.Text = "Coca Nhỏ";
+            this.btnCocaNho.UseVisualStyleBackColor = true;
+            // 
+            // btncb6
+            // 
+            this.btncb6.Location = new System.Drawing.Point(105, 509);
+            this.btncb6.Name = "btncb6";
+            this.btncb6.Size = new System.Drawing.Size(156, 62);
+            this.btncb6.TabIndex = 29;
+            this.btncb6.Tag = "350000";
+            this.btncb6.Text = "Combo 6 miếng gà +3 nước";
+            this.btncb6.UseVisualStyleBackColor = true;
+            // 
+            // btncb3
+            // 
+            this.btncb3.Location = new System.Drawing.Point(258, 509);
+            this.btncb3.Name = "btncb3";
+            this.btncb3.Size = new System.Drawing.Size(156, 62);
+            this.btncb3.TabIndex = 30;
+            this.btncb3.Tag = "250000";
+            this.btncb3.Text = "combo 3 gà+1 nước";
+            this.btncb3.UseVisualStyleBackColor = true;
+            // 
+            // btncbS
+            // 
+            this.btncbS.Location = new System.Drawing.Point(105, 564);
+            this.btncbS.Name = "btncbS";
+            this.btncbS.Size = new System.Drawing.Size(156, 58);
+            this.btncbS.TabIndex = 31;
+            this.btncbS.Tag = "400000";
+            this.btncbS.Text = "Combo Special Mini";
+            this.btncbS.UseVisualStyleBackColor = true;
+            // 
+            // btncbL
+            // 
+            this.btncbL.Location = new System.Drawing.Point(258, 564);
+            this.btncbL.Name = "btncbL";
+            this.btncbL.Size = new System.Drawing.Size(156, 58);
+            this.btncbL.TabIndex = 32;
+            this.btncbL.Tag = "300000";
+            this.btncbL.Text = "Combo Special Lagre";
+            this.btncbL.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(344, 34);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1034, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lập hóa đơn";
+            this.label1.Size = new System.Drawing.Size(127, 29);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "YourOrder";
             // 
-            // txtTotalBill
+            // dateTimePicker1
             // 
-            this.txtTotalBill.Location = new System.Drawing.Point(198, 207);
-            this.txtTotalBill.Name = "txtTotalBill";
-            this.txtTotalBill.Size = new System.Drawing.Size(403, 22);
-            this.txtTotalBill.TabIndex = 1;
+            this.dateTimePicker1.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(885, 551);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(228, 22);
+            this.dateTimePicker1.TabIndex = 34;
             // 
-            // button1
+            // textBox1
             // 
-            this.button1.Location = new System.Drawing.Point(326, 419);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Lập hóa đơn";
-            this.button1.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(960, 415);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(153, 22);
+            this.textBox1.TabIndex = 35;
             // 
-            // cbDrink
+            // textBox2
             // 
-            this.cbDrink.FormattingEnabled = true;
-            this.cbDrink.Location = new System.Drawing.Point(198, 154);
-            this.cbDrink.Name = "cbDrink";
-            this.cbDrink.Size = new System.Drawing.Size(403, 24);
-            this.cbDrink.TabIndex = 3;
+            this.textBox2.Location = new System.Drawing.Point(960, 471);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(153, 22);
+            this.textBox2.TabIndex = 36;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(960, 443);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(153, 22);
+            this.textBox3.TabIndex = 37;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(960, 509);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(153, 24);
+            this.comboBox1.TabIndex = 38;
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(707, 470);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(156, 40);
+            this.button33.TabIndex = 39;
+            this.button33.Text = "Thanh Toán";
+            this.button33.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 78);
+            this.label2.Location = new System.Drawing.Point(882, 418);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Ngày lập hóa đơn";
-            // 
-            // dtDateCheck
-            // 
-            this.dtDateCheck.Location = new System.Drawing.Point(198, 78);
-            this.dtDateCheck.Name = "dtDateCheck";
-            this.dtDateCheck.Size = new System.Drawing.Size(403, 22);
-            this.dtDateCheck.TabIndex = 5;
+            this.label2.Size = new System.Drawing.Size(63, 17);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Tổng Bill";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 111);
+            this.label3.Location = new System.Drawing.Point(878, 446);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Đồ ăn";
+            this.label3.Size = new System.Drawing.Size(72, 17);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Tiền nhận";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(72, 154);
+            this.label4.Location = new System.Drawing.Point(882, 474);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 17);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Thức uống";
-            // 
-            // cbFood
-            // 
-            this.cbFood.FormattingEnabled = true;
-            this.cbFood.Location = new System.Drawing.Point(198, 111);
-            this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(403, 24);
-            this.cbFood.TabIndex = 8;
+            this.label4.Size = new System.Drawing.Size(63, 17);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "Tiền thối";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 207);
+            this.label5.Location = new System.Drawing.Point(882, 516);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Tổng Bill";
+            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.TabIndex = 43;
+            this.label5.Text = "Cachier";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // cbNumber
+            // 
+            this.cbNumber.FormattingEnabled = true;
+            this.cbNumber.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"});
+            this.cbNumber.Location = new System.Drawing.Point(680, 423);
+            this.cbNumber.Name = "cbNumber";
+            this.cbNumber.Size = new System.Drawing.Size(183, 24);
+            this.cbNumber.TabIndex = 44;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(72, 254);
+            this.label6.Location = new System.Drawing.Point(605, 426);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Tiền nhận";
+            this.label6.Size = new System.Drawing.Size(69, 17);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Số Lượng";
             // 
-            // label7
+            // btnXoa
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(72, 295);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 17);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Tiền thối";
+            this.btnXoa.Location = new System.Drawing.Point(1196, 405);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(81, 30);
+            this.btnXoa.TabIndex = 46;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // cbCashier
+            // button35
             // 
-            this.cbCashier.FormattingEnabled = true;
-            this.cbCashier.Location = new System.Drawing.Point(198, 341);
-            this.cbCashier.Name = "cbCashier";
-            this.cbCashier.Size = new System.Drawing.Size(403, 24);
-            this.cbCashier.TabIndex = 12;
+            this.button35.Location = new System.Drawing.Point(1196, 446);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(81, 31);
+            this.button35.TabIndex = 47;
+            this.button35.Text = "Ghi Chú";
+            this.button35.UseVisualStyleBackColor = true;
             // 
-            // txtCash
+            // txtNote
             // 
-            this.txtCash.Location = new System.Drawing.Point(198, 254);
-            this.txtCash.Name = "txtCash";
-            this.txtCash.Size = new System.Drawing.Size(403, 22);
-            this.txtCash.TabIndex = 13;
-            // 
-            // txtExchange
-            // 
-            this.txtExchange.Location = new System.Drawing.Point(198, 295);
-            this.txtExchange.Name = "txtExchange";
-            this.txtExchange.Size = new System.Drawing.Size(403, 22);
-            this.txtExchange.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(79, 341);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 17);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Cashier";
+            this.txtNote.Location = new System.Drawing.Point(1283, 450);
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(153, 22);
+            this.txtNote.TabIndex = 48;
             // 
             // frmCreatBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 509);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtExchange);
-            this.Controls.Add(this.txtCash);
-            this.Controls.Add(this.cbCashier);
-            this.Controls.Add(this.label7);
+            this.ClientSize = new System.Drawing.Size(1562, 616);
+            this.Controls.Add(this.txtNote);
+            this.Controls.Add(this.button35);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbNumber);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cbFood);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dtDateCheck);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbDrink);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtTotalBill);
+            this.Controls.Add(this.button33);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btncbL);
+            this.Controls.Add(this.btncbS);
+            this.Controls.Add(this.btncb3);
+            this.Controls.Add(this.btncb6);
+            this.Controls.Add(this.btnCocaNho);
+            this.Controls.Add(this.btnCocaLon);
+            this.Controls.Add(this.btnSpriteNho);
+            this.Controls.Add(this.btnSpriteLon);
+            this.Controls.Add(this.btnPepSiNho);
+            this.Controls.Add(this.btnPepsiLon);
+            this.Controls.Add(this.btnBanhCuon);
+            this.Controls.Add(this.btnSalad);
+            this.Controls.Add(this.btnPizza);
+            this.Controls.Add(this.btnKhoaiNho);
+            this.Controls.Add(this.btnGa);
+            this.Controls.Add(this.btnKemCay);
+            this.Controls.Add(this.btnSpecial);
+            this.Controls.Add(this.btnCom);
+            this.Controls.Add(this.btnKhoaiLon);
+            this.Controls.Add(this.btnSpa);
+            this.Controls.Add(this.btnBo);
+            this.Controls.Add(this.btn34tt);
+            this.Controls.Add(this.btn34Cay);
+            this.Controls.Add(this.btnUcTruyenThong);
+            this.Controls.Add(this.btnUcGaCay);
+            this.Controls.Add(this.btnCanhTruyenThong);
+            this.Controls.Add(this.btnCanhGaCay);
+            this.Controls.Add(this.btnGaTruyenThong);
+            this.Controls.Add(this.btnGaCay);
+            this.Controls.Add(this.GridItem);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Name = "frmCreatBill";
             this.Text = "frmCreatBill";
+            this.Load += new System.EventHandler(this.frmCreatBill_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GridItem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,21 +648,55 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTotalBill;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox cbDrink;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView GridItem;
+        private System.Windows.Forms.Button btnGaCay;
+        private System.Windows.Forms.Button btnGaTruyenThong;
+        private System.Windows.Forms.Button btnCanhGaCay;
+        private System.Windows.Forms.Button btnCanhTruyenThong;
+        private System.Windows.Forms.Button btnUcGaCay;
+        private System.Windows.Forms.Button btnUcTruyenThong;
+        private System.Windows.Forms.Button btn34Cay;
+        private System.Windows.Forms.Button btn34tt;
+        private System.Windows.Forms.Button btnBo;
+        private System.Windows.Forms.Button btnSpa;
+        private System.Windows.Forms.Button btnKhoaiLon;
+        private System.Windows.Forms.Button btnCom;
+        private System.Windows.Forms.Button btnSpecial;
+        private System.Windows.Forms.Button btnKemCay;
+        private System.Windows.Forms.Button btnGa;
+        private System.Windows.Forms.Button btnKhoaiNho;
+        private System.Windows.Forms.Button btnPizza;
+        private System.Windows.Forms.Button btnSalad;
+        private System.Windows.Forms.Button btnBanhCuon;
+        private System.Windows.Forms.Button btnPepsiLon;
+        private System.Windows.Forms.Button btnPepSiNho;
+        private System.Windows.Forms.Button btnSpriteLon;
+        private System.Windows.Forms.Button btnSpriteNho;
+        private System.Windows.Forms.Button btnCocaLon;
+        private System.Windows.Forms.Button btnCocaNho;
+        private System.Windows.Forms.Button btncb6;
+        private System.Windows.Forms.Button btncb3;
+        private System.Windows.Forms.Button btncbS;
+        private System.Windows.Forms.Button btncbL;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button33;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtDateCheck;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbFood;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbNumber;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbCashier;
-        private System.Windows.Forms.TextBox txtCash;
-        private System.Windows.Forms.TextBox txtExchange;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.TextBox txtNote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

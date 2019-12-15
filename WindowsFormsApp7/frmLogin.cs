@@ -39,6 +39,7 @@ namespace WindowsFormsApp7
                 MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
             }
         }
+        
 
         private void picTurnOff_Click(object sender, EventArgs e)
         {
