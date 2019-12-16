@@ -20,7 +20,7 @@ namespace WindowsFormsApp7.DALFastFood
 
         private DataProvider() { }
 
-        private string connectionSTR = "Data Source=LAPTOP-EAJQCUDS\\SQLEXPRESS01;Initial Catalog=fastfood;Integrated Security=True";
+        private string connectionSTR = "Data Source=LAPTOP-EAJQCUDS\\SQLEXPRESS01;Initial Catalog=fastfood11;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

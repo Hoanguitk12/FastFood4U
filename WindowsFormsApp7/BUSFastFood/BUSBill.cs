@@ -31,9 +31,19 @@ namespace WindowsFormsApp7.BUSFastFood
         {
             return DALBill.Instance.GetBill(query);
         }
+       
         public DTOBill GetBillById(int idbill)
         {
             return DALBill.Instance.GetBillById(idbill);
+        }
+        public int GetIDBillMax()
+        {
+            return DALBill.Instance.GetIDBillMax();
+        }
+        public int getTongThu(string datecheck)
+        {
+            int kq = DALBill.Instance.getTongThu(datecheck);
+            return kq;
         }
         public bool AddBill(string datecheck, int totalbill, int total, int exchange, int idaccount)
         {
@@ -41,9 +51,9 @@ namespace WindowsFormsApp7.BUSFastFood
             return kq;
         }
      
-        public bool EditBill(int idbill, string daycheck, int totalbill, int total, int exchange, int idaccount)
+        public bool EditBill(int idbill, string datecheck, int totalbill, int total, int exchange, int idaccount)
         {
-            bool kq = DALBill.Instance.EditBill(idbill, daycheck, totalbill, total, exchange, idaccount);
+            bool kq = DALBill.Instance.EditBill(idbill, datecheck, totalbill, total, exchange, idaccount);
             return kq;
         }
         public bool DeleteBill(int idbill)

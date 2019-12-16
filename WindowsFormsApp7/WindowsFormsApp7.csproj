@@ -50,17 +50,20 @@
     <Compile Include="BUSFastFood\BUSBill.cs" />
     <Compile Include="BUSFastFood\BUSImport.cs" />
     <Compile Include="BUSFastFood\BUSItemOdered.cs" />
+    <Compile Include="BUSFastFood\BUSRevenue.cs" />
     <Compile Include="BUSFastFood\BUSStaff.cs" />
     <Compile Include="DALFastFood\DALAccount.cs" />
     <Compile Include="DALFastFood\DALBill.cs" />
     <Compile Include="DALFastFood\DALImport.cs" />
     <Compile Include="DALFastFood\DALItemOdered.cs" />
+    <Compile Include="DALFastFood\DALRevenue.cs" />
     <Compile Include="DALFastFood\DALStaff.cs" />
     <Compile Include="DALFastFood\DataProvider.cs" />
     <Compile Include="DTOFastFood\DTOAccount.cs" />
     <Compile Include="DTOFastFood\DTOBill.cs" />
     <Compile Include="DTOFastFood\DTOImport.cs" />
     <Compile Include="DTOFastFood\DTOItemOdered.cs" />
+    <Compile Include="DTOFastFood\DTORevenue.cs" />
     <Compile Include="DTOFastFood\DTOStaff.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>

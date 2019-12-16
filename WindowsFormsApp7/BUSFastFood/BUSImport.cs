@@ -48,5 +48,9 @@ namespace WindowsFormsApp7.BUSFastFood
             bool kq = DALImport.Instance.DeleteImport(idimport);
             return kq;
         }
+        public int GetTongChi(string datecheck)
+        {
+            return DALImport.Instance.GetTongChi(datecheck);
+        }
     }
 }

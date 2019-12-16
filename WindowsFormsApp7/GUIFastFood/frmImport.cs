@@ -38,6 +38,34 @@ namespace WindowsFormsApp7.GUIFastFood
             GridImport.Columns[7].HeaderText = "IdAccount";
 
         }
+        private bool CheckDataImport()
+        {
+            if(txtNameImport.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập tên mặt hàng");
+                txtNameImport.Focus();
+                return false;
+            }
+            if(txtNumber.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập số lượng");
+                txtNumber.Focus();
+                return false;
+            }
+            if(txtSupplier.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập nhà cung cấp");
+                txtSupplier.Focus();
+                return false;
+            }
+            if(txtUnitPrice.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập giá mặt hàng");
+                txtUnitPrice.Focus();
+                return false;
+            }
+            return true;
+        }
 
         private void frmImport_Load(object sender, EventArgs e)
         {
@@ -71,14 +99,17 @@ namespace WindowsFormsApp7.GUIFastFood
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string dayimport= dtpDayImport.Value.Date.ToString("MM/dd/yyyy");
-            string supplier = txtSupplier.Text;
-            string nameimport = txtNameImport.Text;
-            int numbers = int.Parse(txtNumber.Text);
-            int unitprice = int.Parse(txtUnitPrice.Text);
-            int idaccount = (cbAccount.SelectedItem as DTOAccount).Idaccount;
-            AddImport(dayimport, supplier, nameimport, numbers, unitprice, idaccount);
-            LoadImportTodtgv();
+            if (CheckDataImport())
+            {
+                string dayimport = dtpDayImport.Value.Date.ToString("MM/dd/yyyy");
+                string supplier = txtSupplier.Text;
+                string nameimport = txtNameImport.Text;
+                int numbers = int.Parse(txtNumber.Text);
+                int unitprice = int.Parse(txtUnitPrice.Text);
+                int idaccount = (cbAccount.SelectedItem as DTOAccount).Idaccount;
+                AddImport(dayimport, supplier, nameimport, numbers, unitprice, idaccount);
+                LoadImportTodtgv();
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -118,15 +149,18 @@ namespace WindowsFormsApp7.GUIFastFood
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
-            int idimport = (int)GridImport.Rows[GridImport.SelectedRows[0].Index].Cells[1].Value;
-            string dayimport = dtpDayImport.Value.Date.ToString("MM/dd/yyyy");
-            string supplier = txtSupplier.Text;
-            string nameimport = txtNameImport.Text;
-            int numbers = int.Parse(txtNumber.Text);
-            int unitprice = int.Parse(txtUnitPrice.Text);
-            int idaccount = (cbAccount.SelectedItem as DTOAccount).Idaccount;
-            EditImport(idimport, dayimport, supplier, nameimport, numbers, unitprice, idaccount);
-            LoadImportTodtgv();
+            if (CheckDataImport())
+            {
+                int idimport = (int)GridImport.Rows[GridImport.SelectedRows[0].Index].Cells[1].Value;
+                string dayimport = dtpDayImport.Value.Date.ToString("MM/dd/yyyy");
+                string supplier = txtSupplier.Text;
+                string nameimport = txtNameImport.Text;
+                int numbers = int.Parse(txtNumber.Text);
+                int unitprice = int.Parse(txtUnitPrice.Text);
+                int idaccount = (cbAccount.SelectedItem as DTOAccount).Idaccount;
+                EditImport(idimport, dayimport, supplier, nameimport, numbers, unitprice, idaccount);
+                LoadImportTodtgv();
+            }
         }
 
         private void GridImport_CellContentClick(object sender, DataGridViewCellEventArgs e)

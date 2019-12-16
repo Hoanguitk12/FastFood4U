@@ -17,7 +17,13 @@ namespace WindowsFormsApp7.DALFastFood
             get { if (instance == null) instance = new DALAccount(); return DALAccount.instance; } 
             private set { DALAccount.instance = value; } }
 
-
+        public string GetQuyen(string id)
+        {
+            string quyen = string.Empty;
+            string query = string.Format("SELECT status FROM TableAccount WHERE idaccount = {0}", id);
+            quyen = DataProvider.Instance.ExecuteScalar(query).ToString();
+            return quyen;
+        }
 
         public string getID(string taikhoan, string matkhau)
         {

@@ -23,6 +23,7 @@ namespace WindowsFormsApp7.GUIFastFood
         {
 
         }
+        
         private void LoadAccounttodtgv()
         {
             GridAccount.DataSource = BUSAccount.Instance.GetAccount();
@@ -41,6 +42,30 @@ namespace WindowsFormsApp7.GUIFastFood
         {
             LoadAccounttodtgv();
             LoadStaffToCb();
+        }
+        private bool CheckDataAccount()
+        {
+            if(txtNameAccount.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập tên tài khoản");
+                txtNameAccount.Focus();
+                return false;
+            }
+            if(txtPassword.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập mật khẩu");
+                txtPassword.Focus();
+                return false;
+
+            }
+            if(txtStatus.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập quyền");
+                txtStatus.Focus();
+                return false;
+            }
+            return true;
+
         }
 
         private void GridAccount_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -71,40 +96,51 @@ namespace WindowsFormsApp7.GUIFastFood
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string nameaccount = txtNameAccount.Text;
-            string password = txtPassword.Text;
-            string status = txtStatus.Text;
-            int idstaff = (cbStaff.SelectedItem as DTOStaff).IdStaff;
-            AddAccount(nameaccount, password, status, idstaff);
-            LoadAccounttodtgv();
+            if (CheckDataAccount())
+            {
+                string nameaccount = txtNameAccount.Text;
+                string password = txtPassword.Text;
+                string status = txtStatus.Text;
+                int idstaff = (cbStaff.SelectedItem as DTOStaff).IdStaff;
+                AddAccount(nameaccount, password, status, idstaff);
+                LoadAccounttodtgv();
+            }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (GridAccount.SelectedRows.Count > 0)
+            try
             {
-                DialogResult dr = MessageBox.Show(this, "Thao tác này không thể hoàn tác.\nXóa?.", "Cảnh báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
+                if (GridAccount.SelectedRows.Count > 0)
                 {
+                    DialogResult dr = MessageBox.Show(this, "Thao tác này không thể hoàn tác.\nXóa?.", "Cảnh báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr == DialogResult.Yes)
+                    {
 
-                    int idaccount;
-                    idaccount = (int)GridAccount.Rows[GridAccount.SelectedRows[0].Index].Cells[1].Value;
-                    if (BUSAccount.Instance.DeleteAccount(idaccount))
-                    {
-                        MessageBox.Show("Đã xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LoadAccounttodtgv();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        int idaccount;
+                        idaccount = (int)GridAccount.Rows[GridAccount.SelectedRows[0].Index].Cells[1].Value;
+                        if (BUSAccount.Instance.DeleteAccount(idaccount))
+                        {
+                            MessageBox.Show("Đã xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadAccounttodtgv();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
+            catch(Exception)
             {
-                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("không thể xóa tài khoản admin");
             }
+
         }
         private void EditAccount(int idaccount, string nameaccount, string password, string status, int idstaff)
         {
@@ -118,13 +154,16 @@ namespace WindowsFormsApp7.GUIFastFood
 
         private void button3_Click(object sender, EventArgs e)
         {
-           int idaccount= (int)GridAccount.Rows[GridAccount.SelectedRows[0].Index].Cells[1].Value;
-            string nameaccount = txtNameAccount.Text;
-            string password = txtPassword.Text;
-            string status = txtStatus.Text;
-          
-              int idstaff = (cbStaff.SelectedItem as DTOStaff).IdStaff;
-            EditAccount(idaccount, nameaccount, password, status, idstaff);
+            if (CheckDataAccount())
+            {
+                int idaccount = (int)GridAccount.Rows[GridAccount.SelectedRows[0].Index].Cells[1].Value;
+                string nameaccount = txtNameAccount.Text;
+                string password = txtPassword.Text;
+                string status = txtStatus.Text;
+
+                int idstaff = (cbStaff.SelectedItem as DTOStaff).IdStaff;
+                EditAccount(idaccount, nameaccount, password, status, idstaff);
+            }
         }
 
         private void GridAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)

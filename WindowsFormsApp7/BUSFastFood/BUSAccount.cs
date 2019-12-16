@@ -18,6 +18,10 @@ namespace WindowsFormsApp7.BUSFastFood
             get { if (instance == null) instance = new BUSAccount(); return BUSAccount.instance; }
             private set { BUSAccount.instance = value; }
         }
+        public string GetQuyen(string id)
+        {
+            return DALAccount.Instance.GetQuyen(id);
+        }
         public List<DTOAccount> GetListAccount()
         {
             return DALAccount.Instance.GetListAccount();

@@ -29,6 +29,12 @@ namespace WindowsFormsApp7.DALFastFood
             }
             return list;
         }
+        public int GetTongChi(string datecheck)
+        {
+            string query = string.Format("SELECT SUM(unitprice) FROM TableImport WHERE dayimport='{0}'", datecheck);
+            int kq = (int)DataProvider.Instance.ExecuteScalar(query);
+            return kq;
+        }
 
         public DataTable GetImport()
         {

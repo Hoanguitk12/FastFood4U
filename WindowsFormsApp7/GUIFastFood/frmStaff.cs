@@ -36,6 +36,30 @@ namespace WindowsFormsApp7.GUIFastFood
               gridDSGV.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
               */
         }
+        private bool CheckDataStaff()
+        {
+            if(txtNhanVien.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập tên nhân viên");
+                txtNhanVien.Focus();
+                return false;
+                
+            }
+            if(txtDiaChi.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập địa chỉ");
+                txtDiaChi.Focus();
+                return false;
+            }
+            if(txtSDT.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập sdt");
+                txtSDT.Focus();
+                return false;
+
+            }
+            return true;
+        }
 
         private void frmStaff_Load(object sender, EventArgs e)
         {
@@ -70,52 +94,65 @@ namespace WindowsFormsApp7.GUIFastFood
         }
 
         private void btnThem_Click(object sender, EventArgs e)
-        {
-            string namestaff = txtNhanVien.Text;
-            string birthday = dtpNgaySinh.Value.Date.ToString("MM/dd/yyyy");
-            string workday = dtpNgayVaoLam.Value.Date.ToString("MM/dd/yyyy");
-            string sex = GetGioiTinh();
-            string address = txtDiaChi.Text;
-            string phonenumber = txtSDT.Text;
-            AddStaff(namestaff, birthday, workday, sex, address, phonenumber);
+        {   if (CheckDataStaff())
+            {
+                string namestaff = txtNhanVien.Text;
+                string birthday = dtpNgaySinh.Value.Date.ToString("MM/dd/yyyy");
+                string workday = dtpNgayVaoLam.Value.Date.ToString("MM/dd/yyyy");
+                string sex = GetGioiTinh();
+                string address = txtDiaChi.Text;
+                string phonenumber = txtSDT.Text;
+                AddStaff(namestaff, birthday, workday, sex, address, phonenumber);
+            }
           
 
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (GridStaff.SelectedRows.Count > 0)
+            try
             {
-                DialogResult dr = MessageBox.Show(this, "Thao tác này không thể hoàn tác.\nXóa?.", "Cảnh báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
+                if (GridStaff.SelectedRows.Count > 0)
                 {
+                    DialogResult dr = MessageBox.Show(this, "Thao tác này không thể hoàn tác.\nXóa?.", "Cảnh báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr == DialogResult.Yes)
+                    {
 
-                    int idstaff;
-                   idstaff = (int)GridStaff.Rows[GridStaff.SelectedRows[0].Index].Cells[1].Value;
-                    if (BUSStaff.Instance.DeleteStaff(idstaff))
-                    {
-                        MessageBox.Show("Đã xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LoadStafftodtgv();           
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        int idstaff;
+                        idstaff = (int)GridStaff.Rows[GridStaff.SelectedRows[0].Index].Cells[1].Value;
+                        if (BUSStaff.Instance.DeleteStaff(idstaff))
+                        {
+                            MessageBox.Show("Đã xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadStafftodtgv();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
+            catch(Exception )
             {
-                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nhân viên đã dc tạo tài khoản không thể xóa");
+               
             }
         }
         private void EditStaff(int idstaff,string namestaff, string birthday, string workday, string sex, string address, string phonenumber)
         {
-            if (BUSStaff.Instance.EditStaff(idstaff,namestaff,birthday,workday,sex,address,phonenumber))
+            if (CheckDataStaff())
             {
-                MessageBox.Show("Sửa Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (BUSStaff.Instance.EditStaff(idstaff, namestaff, birthday, workday, sex, address, phonenumber))
+                {
+                    MessageBox.Show("Sửa Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    MessageBox.Show("Sửa Thất Bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
-                MessageBox.Show("Sửa Thất Bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnSua_Click(object sender, EventArgs e)

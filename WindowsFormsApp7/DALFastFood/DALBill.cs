@@ -49,6 +49,20 @@ namespace WindowsFormsApp7.DALFastFood
             DTOBill gv = new DTOBill(dt.Rows[0]);
             return gv;
         }
+        public int GetIDBillMax()
+        {
+            string query = string.Format("SELECT MAX(idbill) FROM TableBill");
+            int kq = (int)DataProvider.Instance.ExecuteScalar(query);
+            return kq;
+        }
+        public int getTongThu(string datecheck)
+        {
+            string query = string.Format("SELECT SUM(totalbill) FROM TableBill WHERE datecheck='{0}'", datecheck);
+            int kq = (int)DataProvider.Instance.ExecuteScalar(query);
+            return kq;
+        }
+
+
         public bool AddBill(string datecheck, int totalbill, int total, int exchange,int idaccount)
         {
             int kq = 0;
@@ -57,12 +71,11 @@ namespace WindowsFormsApp7.DALFastFood
             kq = DataProvider.Instance.ExecuteNonQuery(query);
             return kq > 0;
         }
-       
-
-        public bool EditBill(int idbill, string daycheck, int totalbill, int total, int exchange, int idaccount)
+      
+        public bool EditBill(int idbill, string datecheck, int totalbill, int total, int exchange, int idaccount)
         {
             int kq = 0;
-            string query = string.Format("UPDATE TableBill SET daycheck = N'{0}', totalbill = N'{1}', total= '{2}',exchange= N'{3}', idaccount = N'{4}' WHERE idbill= {5}", daycheck, totalbill, total, exchange, idaccount, idbill);
+            string query = string.Format("UPDATE TableBill SET datecheck = N'{0}', totalbill = N'{1}', total= '{2}',exchange= N'{3}', idaccount = N'{4}' WHERE idbill= {5}", datecheck, totalbill, total, exchange, idaccount, idbill);
             kq = DataProvider.Instance.ExecuteNonQuery(query);
             return kq > 0;
         }
@@ -75,6 +88,7 @@ namespace WindowsFormsApp7.DALFastFood
             return kq > 0;
             
         }
+        
 
     }
 }

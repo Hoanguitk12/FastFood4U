@@ -34,7 +34,7 @@ create table TableImport
 	supplier	nvarchar(100) not null,
 	nameimport	nvarchar(100) not null,
 	numbers		int not null,
-	unitprice	money not null,
+	unitprice	int not null,
 	idaccount	int not null,
 
 	foreign key(idaccount) references dbo.TableAccount(idaccount)
@@ -42,38 +42,34 @@ create table TableImport
 )
 go
 
-create table TableFood
-(
-	idfood		int identity primary key,
-	namefood	nvarchar(100) not null,
-	cost		money not null,
-	numbers		int not null,
-)
-go
 
-create table TableDrink
-(
-	iddrink		int identity primary key,
-	namedrink	nvarchar(100) not null,
-	cost		money not null,
-	numbers		int not null,
-)
-go
 
 create table TableBill
 (
+	
 	idbill		int identity primary key,
 	datecheck	datetime not null,
-	idfood		int not null,
-	iddrink		int not null,
-	totalbill	money not null,
-	total		money not null,
-	exchange	money not null,
+	
+	
+	totalbill	int not null,
+	total		int not null,
+	exchange	int not null,
 	idaccount	int not null,
 
-	foreign key(idfood) references dbo.TableFood(idfood),
-	foreign key(iddrink) references dbo.TableDrink(iddrink),
+	
 	foreign key(idaccount) references dbo.TableAccount(idaccount),
+)
+go
+create table TableItemOdered
+(
+idItem		 int identity primary key,
+nameItem 	nvarchar(100) not null,
+cost		int not null,
+numbers		int not null,
+note            nvarchar(100) ,
+idbill		int not null,
+foreign key(idbill) references dbo.TableBill(idbill),
+
 )
 go
 
@@ -81,7 +77,9 @@ create table TableRevenue
 (
 	idrevenue	int identity primary key,
 	datecheck	datetime not null,
-	total		money not null,
+	total		int not null,
 )
 go
 
+insert into TableStaff values('admin','02/09/1999','02/09/1999','Nam','Thu Duc',0898507029)
+insert into TableAccount values('admin','1234','admin',1)

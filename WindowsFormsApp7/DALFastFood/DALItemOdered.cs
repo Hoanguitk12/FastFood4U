@@ -33,19 +33,25 @@ namespace WindowsFormsApp7.DALFastFood
 
         public DataTable GetItemOdered()
         {
-            string query = "SELECT * FROM TableItemOdered ORDER BY nameItem";
+            string query = "SELECT * FROM TableItemOdered ORDER BY idbill DESC";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
-
+        public int getTotalBill(int idbill)
+        {
+            string query = string.Format("SELECT SUM(cost) FROM TableItemOdered WHERE idbill={0}", idbill);
+            int kq = (int)DataProvider.Instance.ExecuteScalar(query);
+            return kq;
+        }
+       
         public DataTable GetItemOdered(string query)
         {
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
-        public DTOItemOdered GetItemOderedById(int idItem)
+        public DTOItemOdered GetItemOderedById(int idbill)
         {
-            string query = string.Format("SELECT idItem,nameItem,cost,numbers,note,idbill FROM TableItemOdered WHERE idItem={0}", idItem);
+            string query = string.Format("SELECT * FROM TableItemOdered WHERE idbill={0}  ", idbill);
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             DTOItemOdered gv = new DTOItemOdered(dt.Rows[0]);
             return gv;
@@ -54,7 +60,7 @@ namespace WindowsFormsApp7.DALFastFood
         {
             int kq = 0;
 
-            string query = string.Format("INSERT INTO TableItemOdered(nameItem,cost,numbers,note,idbill) VALUES (N'{0}',N'{1}','{2}',N'{3}',N'{4}',)", nameItem, cost, numbers, note, idbill);
+            string query = string.Format("INSERT INTO TableItemOdered(nameItem,cost,numbers,note,idbill) VALUES (N'{0}',N'{1}','{2}',N'{3}',N'{4}')", nameItem, cost, numbers, note, idbill);
             kq = DataProvider.Instance.ExecuteNonQuery(query);
             return kq > 0;
         }
@@ -70,7 +76,7 @@ namespace WindowsFormsApp7.DALFastFood
         public bool DeleteItemOdered(int idItem)
         {
             int kq = 0;
-            string query = string.Format("DELETE FROM TableItemOdered WHERE idItemOdered={0}", idItem);
+            string query = string.Format("DELETE FROM TableItemOdered WHERE idItem={0}", idItem);
             kq = DataProvider.Instance.ExecuteNonQuery(query);
             return kq > 0;
         }

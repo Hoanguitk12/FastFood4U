@@ -63,12 +63,11 @@
             this.btncbS = new System.Windows.Forms.Button();
             this.btncbL = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button33 = new System.Windows.Forms.Button();
+            this.dtpDateCheck = new System.Windows.Forms.DateTimePicker();
+            this.txtTotalBill = new System.Windows.Forms.TextBox();
+            this.txtExchange = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.btnOdered = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -78,6 +77,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.button35 = new System.Windows.Forms.Button();
             this.txtNote = new System.Windows.Forms.TextBox();
+            this.cbAccount = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridItem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,6 +151,7 @@
             this.btnGaTruyenThong.Tag = "36000";
             this.btnGaTruyenThong.Text = "Gà truyền thống";
             this.btnGaTruyenThong.UseVisualStyleBackColor = true;
+            this.btnGaTruyenThong.Click += new System.EventHandler(this.btnGaTruyenThong_Click);
             // 
             // btnCanhGaCay
             // 
@@ -161,6 +162,7 @@
             this.btnCanhGaCay.Tag = "25000";
             this.btnCanhGaCay.Text = "Cánh gà cay";
             this.btnCanhGaCay.UseVisualStyleBackColor = true;
+            this.btnCanhGaCay.Click += new System.EventHandler(this.btnCanhGaCay_Click);
             // 
             // btnCanhTruyenThong
             // 
@@ -171,6 +173,7 @@
             this.btnCanhTruyenThong.Tag = "25000";
             this.btnCanhTruyenThong.Text = "Cánh truyền thống";
             this.btnCanhTruyenThong.UseVisualStyleBackColor = true;
+            this.btnCanhTruyenThong.Click += new System.EventHandler(this.btnCanhTruyenThong_Click);
             // 
             // btnUcGaCay
             // 
@@ -181,6 +184,7 @@
             this.btnUcGaCay.Tag = "30000";
             this.btnUcGaCay.Text = "Ức gà cay";
             this.btnUcGaCay.UseVisualStyleBackColor = true;
+            this.btnUcGaCay.Click += new System.EventHandler(this.btnUcGaCay_Click);
             // 
             // btnUcTruyenThong
             // 
@@ -191,6 +195,7 @@
             this.btnUcTruyenThong.Tag = "30000";
             this.btnUcTruyenThong.Text = "Ức truyền thống";
             this.btnUcTruyenThong.UseVisualStyleBackColor = true;
+            this.btnUcTruyenThong.Click += new System.EventHandler(this.btnUcTruyenThong_Click);
             // 
             // btn34Cay
             // 
@@ -201,6 +206,7 @@
             this.btn34Cay.Tag = "75000";
             this.btn34Cay.Text = "Ba phần tư cay";
             this.btn34Cay.UseVisualStyleBackColor = true;
+            this.btn34Cay.Click += new System.EventHandler(this.btn34Cay_Click);
             // 
             // btn34tt
             // 
@@ -211,6 +217,7 @@
             this.btn34tt.Tag = "75000";
             this.btn34tt.Text = "Ba phần tư truyền thống";
             this.btn34tt.UseVisualStyleBackColor = true;
+            this.btn34tt.Click += new System.EventHandler(this.btn34tt_Click);
             // 
             // btnBo
             // 
@@ -221,6 +228,7 @@
             this.btnBo.Tag = "50000";
             this.btnBo.Text = "Hamburger bò";
             this.btnBo.UseVisualStyleBackColor = true;
+            this.btnBo.Click += new System.EventHandler(this.btnBo_Click);
             // 
             // btnSpa
             // 
@@ -231,6 +239,7 @@
             this.btnSpa.Tag = "65000";
             this.btnSpa.Text = "Spagheti";
             this.btnSpa.UseVisualStyleBackColor = true;
+            this.btnSpa.Click += new System.EventHandler(this.btnSpa_Click);
             // 
             // btnKhoaiLon
             // 
@@ -241,6 +250,7 @@
             this.btnKhoaiLon.Tag = "25000";
             this.btnKhoaiLon.Text = "Khoai tây lớn";
             this.btnKhoaiLon.UseVisualStyleBackColor = true;
+            this.btnKhoaiLon.Click += new System.EventHandler(this.btnKhoaiLon_Click);
             // 
             // btnCom
             // 
@@ -251,6 +261,7 @@
             this.btnCom.Tag = "10000";
             this.btnCom.Text = "Cơm Thêm";
             this.btnCom.UseVisualStyleBackColor = true;
+            this.btnCom.Click += new System.EventHandler(this.btnCom_Click);
             // 
             // btnSpecial
             // 
@@ -261,6 +272,7 @@
             this.btnSpecial.Tag = "80000";
             this.btnSpecial.Text = "Hamburger Special";
             this.btnSpecial.UseVisualStyleBackColor = true;
+            this.btnSpecial.Click += new System.EventHandler(this.btnSpecial_Click);
             // 
             // btnKemCay
             // 
@@ -271,6 +283,7 @@
             this.btnKemCay.Tag = "10000";
             this.btnKemCay.Text = "Kem Cây";
             this.btnKemCay.UseVisualStyleBackColor = true;
+            this.btnKemCay.Click += new System.EventHandler(this.btnKemCay_Click);
             // 
             // btnGa
             // 
@@ -281,6 +294,7 @@
             this.btnGa.Tag = "65000";
             this.btnGa.Text = "Hamburger gà";
             this.btnGa.UseVisualStyleBackColor = true;
+            this.btnGa.Click += new System.EventHandler(this.btnGa_Click);
             // 
             // btnKhoaiNho
             // 
@@ -291,6 +305,7 @@
             this.btnKhoaiNho.Tag = "35000";
             this.btnKhoaiNho.Text = "Khoai tây nhỏ";
             this.btnKhoaiNho.UseVisualStyleBackColor = true;
+            this.btnKhoaiNho.Click += new System.EventHandler(this.btnKhoaiNho_Click);
             // 
             // btnPizza
             // 
@@ -301,6 +316,7 @@
             this.btnPizza.Tag = "100000";
             this.btnPizza.Text = "Pizza Special";
             this.btnPizza.UseVisualStyleBackColor = true;
+            this.btnPizza.Click += new System.EventHandler(this.btnPizza_Click);
             // 
             // btnSalad
             // 
@@ -311,6 +327,7 @@
             this.btnSalad.Tag = "20000";
             this.btnSalad.Text = "Salad";
             this.btnSalad.UseVisualStyleBackColor = true;
+            this.btnSalad.Click += new System.EventHandler(this.btnSalad_Click);
             // 
             // btnBanhCuon
             // 
@@ -321,6 +338,7 @@
             this.btnBanhCuon.Tag = "20000";
             this.btnBanhCuon.Text = "Bánh cuộn";
             this.btnBanhCuon.UseVisualStyleBackColor = true;
+            this.btnBanhCuon.Click += new System.EventHandler(this.btnBanhCuon_Click);
             // 
             // btnPepsiLon
             // 
@@ -331,6 +349,7 @@
             this.btnPepsiLon.Tag = "20000";
             this.btnPepsiLon.Text = "Pepsi Lớn";
             this.btnPepsiLon.UseVisualStyleBackColor = true;
+            this.btnPepsiLon.Click += new System.EventHandler(this.btnPepsiLon_Click);
             // 
             // btnPepSiNho
             // 
@@ -341,6 +360,7 @@
             this.btnPepSiNho.Tag = "30000";
             this.btnPepSiNho.Text = "PepSi Nhỏ";
             this.btnPepSiNho.UseVisualStyleBackColor = true;
+            this.btnPepSiNho.Click += new System.EventHandler(this.btnPepSiNho_Click);
             // 
             // btnSpriteLon
             // 
@@ -351,6 +371,7 @@
             this.btnSpriteLon.Tag = "20000";
             this.btnSpriteLon.Text = "Sprite Lớn";
             this.btnSpriteLon.UseVisualStyleBackColor = true;
+            this.btnSpriteLon.Click += new System.EventHandler(this.btnSpriteLon_Click);
             // 
             // btnSpriteNho
             // 
@@ -361,6 +382,7 @@
             this.btnSpriteNho.Tag = "30000";
             this.btnSpriteNho.Text = "Sprite Nhỏ";
             this.btnSpriteNho.UseVisualStyleBackColor = true;
+            this.btnSpriteNho.Click += new System.EventHandler(this.btnSpriteNho_Click);
             // 
             // btnCocaLon
             // 
@@ -371,6 +393,7 @@
             this.btnCocaLon.Tag = "20000";
             this.btnCocaLon.Text = "Coca Lớn";
             this.btnCocaLon.UseVisualStyleBackColor = true;
+            this.btnCocaLon.Click += new System.EventHandler(this.btnCocaLon_Click);
             // 
             // btnCocaNho
             // 
@@ -381,6 +404,7 @@
             this.btnCocaNho.Tag = "30000";
             this.btnCocaNho.Text = "Coca Nhỏ";
             this.btnCocaNho.UseVisualStyleBackColor = true;
+            this.btnCocaNho.Click += new System.EventHandler(this.btnCocaNho_Click);
             // 
             // btncb6
             // 
@@ -391,6 +415,7 @@
             this.btncb6.Tag = "350000";
             this.btncb6.Text = "Combo 6 miếng gà +3 nước";
             this.btncb6.UseVisualStyleBackColor = true;
+            this.btncb6.Click += new System.EventHandler(this.btncb6_Click);
             // 
             // btncb3
             // 
@@ -401,6 +426,7 @@
             this.btncb3.Tag = "250000";
             this.btncb3.Text = "combo 3 gà+1 nước";
             this.btncb3.UseVisualStyleBackColor = true;
+            this.btncb3.Click += new System.EventHandler(this.btncb3_Click);
             // 
             // btncbS
             // 
@@ -411,6 +437,7 @@
             this.btncbS.Tag = "400000";
             this.btncbS.Text = "Combo Special Mini";
             this.btncbS.UseVisualStyleBackColor = true;
+            this.btncbS.Click += new System.EventHandler(this.btncbS_Click);
             // 
             // btncbL
             // 
@@ -421,6 +448,7 @@
             this.btncbL.Tag = "300000";
             this.btncbL.Text = "Combo Special Lagre";
             this.btncbL.UseVisualStyleBackColor = true;
+            this.btncbL.Click += new System.EventHandler(this.btncbL_Click);
             // 
             // label1
             // 
@@ -432,54 +460,47 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "YourOrder";
             // 
-            // dateTimePicker1
+            // dtpDateCheck
             // 
-            this.dateTimePicker1.CustomFormat = "MM/dd/yyyy hh:mm:ss";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(885, 551);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(228, 22);
-            this.dateTimePicker1.TabIndex = 34;
+            this.dtpDateCheck.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.dtpDateCheck.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateCheck.Location = new System.Drawing.Point(885, 551);
+            this.dtpDateCheck.Name = "dtpDateCheck";
+            this.dtpDateCheck.Size = new System.Drawing.Size(228, 22);
+            this.dtpDateCheck.TabIndex = 34;
             // 
-            // textBox1
+            // txtTotalBill
             // 
-            this.textBox1.Location = new System.Drawing.Point(960, 415);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(153, 22);
-            this.textBox1.TabIndex = 35;
+            this.txtTotalBill.Location = new System.Drawing.Point(960, 415);
+            this.txtTotalBill.Name = "txtTotalBill";
+            this.txtTotalBill.ReadOnly = true;
+            this.txtTotalBill.Size = new System.Drawing.Size(153, 22);
+            this.txtTotalBill.TabIndex = 35;
             // 
-            // textBox2
+            // txtExchange
             // 
-            this.textBox2.Location = new System.Drawing.Point(960, 471);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(153, 22);
-            this.textBox2.TabIndex = 36;
+            this.txtExchange.Location = new System.Drawing.Point(960, 471);
+            this.txtExchange.Name = "txtExchange";
+            this.txtExchange.ReadOnly = true;
+            this.txtExchange.Size = new System.Drawing.Size(153, 22);
+            this.txtExchange.TabIndex = 36;
             // 
-            // textBox3
+            // txtTotal
             // 
-            this.textBox3.Location = new System.Drawing.Point(960, 443);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(153, 22);
-            this.textBox3.TabIndex = 37;
+            this.txtTotal.Location = new System.Drawing.Point(960, 443);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(153, 22);
+            this.txtTotal.TabIndex = 37;
             // 
-            // comboBox1
+            // btnOdered
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(960, 509);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 24);
-            this.comboBox1.TabIndex = 38;
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(707, 470);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(156, 40);
-            this.button33.TabIndex = 39;
-            this.button33.Text = "Thanh Toán";
-            this.button33.UseVisualStyleBackColor = true;
+            this.btnOdered.Location = new System.Drawing.Point(707, 470);
+            this.btnOdered.Name = "btnOdered";
+            this.btnOdered.Size = new System.Drawing.Size(156, 40);
+            this.btnOdered.TabIndex = 39;
+            this.btnOdered.Text = "Thanh Toán";
+            this.btnOdered.UseVisualStyleBackColor = true;
+            this.btnOdered.Click += new System.EventHandler(this.btnOdered_Click);
             // 
             // label2
             // 
@@ -582,6 +603,14 @@
             this.txtNote.Size = new System.Drawing.Size(153, 22);
             this.txtNote.TabIndex = 48;
             // 
+            // cbAccount
+            // 
+            this.cbAccount.FormattingEnabled = true;
+            this.cbAccount.Location = new System.Drawing.Point(960, 509);
+            this.cbAccount.Name = "cbAccount";
+            this.cbAccount.Size = new System.Drawing.Size(153, 24);
+            this.cbAccount.TabIndex = 38;
+            // 
             // frmCreatBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -597,12 +626,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button33);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.btnOdered);
+            this.Controls.Add(this.cbAccount);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.txtExchange);
+            this.Controls.Add(this.txtTotalBill);
+            this.Controls.Add(this.dtpDateCheck);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btncbL);
             this.Controls.Add(this.btncbS);
@@ -682,12 +711,11 @@
         private System.Windows.Forms.Button btncbS;
         private System.Windows.Forms.Button btncbL;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.DateTimePicker dtpDateCheck;
+        private System.Windows.Forms.TextBox txtTotalBill;
+        private System.Windows.Forms.TextBox txtExchange;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Button btnOdered;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -698,5 +726,6 @@
         private System.Windows.Forms.Button button35;
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.ComboBox cbAccount;
     }
 }

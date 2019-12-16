@@ -30,10 +30,15 @@ namespace WindowsFormsApp7.BUSFastFood
         {
             return DALItemOdered.Instance.GetItemOdered(query);
         }
-        public DTOItemOdered GetItemOderedById(int idItem)
+        public DTOItemOdered GetItemOderedById(int idbill)
         {
-            return DALItemOdered.Instance.GetItemOderedById(idItem);
+            return DALItemOdered.Instance.GetItemOderedById( idbill);
         }
+        public int getTotalBill(int idbill)
+        {
+            return DALItemOdered.Instance.getTotalBill(idbill);
+        }
+        
         public bool AddItemOdered(string nameItem, int cost, int numbers, string note, int idbill)
         {
             bool kq = DALItemOdered.Instance.AddItemOdered(nameItem, cost, numbers, note, idbill);
